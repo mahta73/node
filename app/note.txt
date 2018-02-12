@@ -16,3 +16,68 @@
   * What is a module?
     A module encapsulates related code into a single unit of code.
     module.exports is the object that's actually returned as the result of a require call.
+
+  * npm install lodash --save
+
+    With this single command we achieved two things: first of all, lodash is downloaded and
+    placed into the node_modules folder. This is the folder where all your external dependencies
+    will be put. Usually, you don't want to add this folder to your source control,
+    so if you are using git make sure to add it to the .gitignore file.
+
+    package-lock.json is automatically generated for any operations where npm modifies either
+    the node_modules tree, or package.json . It describes the exact tree that was generated,
+    such that subsequent installs are able to generate identical trees, regardless of
+    intermediate dependency updates.
+
+  * --save       dependencies
+    --save-dev   devDependencies
+
+    By default, npm install will install all modules listed as dependencies in package.json.
+    dependencies are required to run, devDependencies only to develop.
+    When you are building web applications, you may need to minify your JavaScript files,
+    concatenating CSS files and so on. The modules that will do it will be only ran during
+    the building of the assets, so the running application doesn't need them.
+    You can install such scripts with:
+    npm install something --save-dev
+    Once you do that, a new section will appear in your package.json file called devDependencies.
+    All the modules you install with --save-dev will be placed there.
+    also, they will be put in the very same node_modules directory.
+
+  * NPM SCRIPTS
+    NPM script is a very powerful concept.
+    with the help of them you can build small utilities or even compose complex build systems.
+    The most common ones are the start and the test scripts.
+
+    start: pretty straightforward, it just describes the starting point of your application,
+    it can be invoked with npm start
+
+    test: the purpose of this one is to run your tests - one gotcha here is that in this case
+    mocha doesn't need to be installed globally, as npm will look for it in the
+    node_modules/.bin folder, and mocha will be placed there as well. It can be invoked
+    with: npm test.
+
+    your-custom-script: anything that you want, you can pick any name.
+    It can be invoked with npm run your-custom-script - don't forget the run part
+
+
+    *** mocha ***
+    Mocha is a feature-rich JavaScript test framework running on Node.js and in the browser,
+    making asynchronous testing simple and fun. Mocha tests run serially, allowing for
+    flexible and accurate reporting, while mapping uncaught exceptions to the correct test cases.
+    Hosted on GitHub.
+
+  * NPM addressed this problem with the introduction of scoped packages.
+    Scoped packages has the following naming pattern
+    npm install @scople(namespace for the package)/project-name --save
+    when you sign up for npm private module as an individual user the scope is your user name,
+    you can also have public scope packages
+
+    npm publish
+    npm publish --access=public
+    npm logout
+    npm login
+    npm add user
+    sign up for private modules
+    npm init --scope=anything
+    npm config set scope anything
+    npm config get scope

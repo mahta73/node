@@ -1,12 +1,26 @@
 {
-  "name": "nodejs",
+  "name": "@username/project-name-scope",
   "version": "1.0.0",
-  "description": "",
+  "description": "Learning nodejs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "node index.js"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Mahta Rezayazdi",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "mocha": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MahtaMR/node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MahtaMR/node/issues"
+  },
+  "homepage": "https://github.com/MahtaMR/node#readme"
 }
