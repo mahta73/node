@@ -1,0 +1,18 @@
+  * nvm (Node Version Manager)
+      nvm install 9
+      nvm use 9
+      node --version
+
+  * nodejs -> package.json(npm init)
+    "start": "node index.js"
+
+  * require -> const something = require('./something')
+      something.somethingInSomething
+
+  * reduce() -> array.reduce() reduce the array to a single value
+    array.reduce((total, current) => total + current)
+    array.reduce((total, current) => total + current, 0)
+
+  * What is a module?
+    A module encapsulates related code into a single unit of code.
+    module.exports is the object that's actually returned as the result of a require call.
