@@ -16,15 +16,18 @@
 
     console.log('before (non blocking)');
 
-    fs.readFile('./file.html', 'utf8', function(err, data) {
+    const callback = function(err, data) {
       console.log(data);
-    });
+    }
 
+    fs.readFile('./file/file.html', 'utf8', callback);
+    fs.readFile('./file/file3.html', 'utf8', callback);
+    
     console.log('after, probably (non blocking)');
 
     console.log('before (blocking)');
 
-    const data = fs.readFileSync('./file2.html', 'utf8');
+    const data = fs.readFileSync('./file/file2.html', 'utf8');
 
     console.log(data);
 
