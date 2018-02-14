@@ -10,6 +10,9 @@
   "author": "Mahta Rezayazdi",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.6.0",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
     "lodash": "^4.17.5"
   },
   "devDependencies": {
