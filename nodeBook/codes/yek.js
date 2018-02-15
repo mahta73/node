@@ -22,7 +22,7 @@
 
     fs.readFile('./file/file.html', 'utf8', callback);
     fs.readFile('./file/file3.html', 'utf8', callback);
-    
+
     console.log('after, probably (non blocking)');
 
     console.log('before (blocking)');
