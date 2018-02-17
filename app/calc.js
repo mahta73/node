@@ -1,3 +1,4 @@
+  // using another branch in git 
 
   // array.reduce() method reduce our array to a single value
   let sum = function(arr) {
