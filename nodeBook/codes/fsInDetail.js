@@ -17,7 +17,7 @@
     res.sendFile('index.html', {root: path.join(__dirname, '../file')}); // this is the root file
   });
 
-/*  fs.unlink('../file/mySecondFile', (err) => {
+  fs.unlink('../file/mySecondFile', (err) => {
     console.log( (err ?  err : 'successfully deleted') );
   });
 
@@ -41,7 +41,7 @@
       console.log(`stat: ${JSON.stringify(stats)}`);
     })
   });
-*/
+
   /*
   $ cat script.js
   function bad() {
